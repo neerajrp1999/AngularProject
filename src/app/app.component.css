@@ -1,0 +1,50 @@
+  .mainF{
+    margin: 82px auto 32px;
+    padding: 20px;
+    display: flex;
+    width: 2000px;
+  }
+
+  table, td {
+    border: 2px solid grey;
+    border-collapse: collapse;
+    padding: 8px;
+  }
+  .content, .sideNumber{
+    display: flex;
+    max-width: auto;
+    align-items: left;
+  }
+  .content {
+    margin: 12px auto 32px;
+    padding: 0 16px;
+    
+  }
+  .content1 {
+    margin: 12px auto 32px;
+    padding: 0 16px;
+    max-width: auto;
+    align-items: left;
+    display: flex;
+  }
+  .sideNumber{
+    margin: 82px auto 32px;
+    padding: 0 16px;
+    position: fixed;
+  }
+.float-child1 {
+    width: 15%;
+    float: left;
+    padding: 20px;
+    
+}
+.float-child2 {
+  width: 65%;
+  float: left;
+  padding: 20px;
+}
+.float-child2 {
+  width: 20%;
+  float: left;
+  padding: 20px;
+}

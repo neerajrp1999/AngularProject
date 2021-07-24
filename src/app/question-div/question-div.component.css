@@ -1,0 +1,20 @@
+.QImage{border: 2px solid grey;}
+.inputR, .ImageA{
+    display: flex;
+    max-width: auto;
+    align-items: center;
+  }
+.float-child1 {
+    width: 5%;
+    float: left;
+    padding: 5px;
+    
+}
+.float-child2 {
+  width: 95%;
+  float: left;
+  padding: 5px;
+}
+.questionFloating{
+    display: flex;
+}

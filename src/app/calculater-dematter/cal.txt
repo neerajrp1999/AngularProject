@@ -1,0 +1,94 @@
+
+// ---------- INIT... ---------- //
+
+// this.hiddenCopy.focus(); // for Chrome extention only
+
+// colloect all keys...
+
+
+/*
+
+// recover after reload or crash...
+(function (localStorage) {
+  if (!localStorage || !localStorage['resBuffer']) {
+    return; // for the very first run or after fatal crash
+  }
+  bigger = localStorage['bigger'] ? eval(localStorage['bigger']) : true;
+  this.toggleCalc();
+  if (+localStorage['ln']) {
+    ln = localStorage['ln'];
+    switchGrouping();
+  }
+  try {
+    if (localStorage['secondActive'].match(/false|null/) ? false : true) {
+      keyDown(false, this.keyBoard['2nd']);
+      this.doKey('2nd', true);
+    }
+    if (eval(localStorage['deg'])) this.doKey('Deg', true);
+    if (localStorage['memory']) {
+      this.render(localStorage['memory']);
+      this.doKey('m+', true);
+    }
+    this.render(localStorage['resBuffer']);
+    var buffStrX = localStorage['buffStr'].split(',');
+    for (var n = 0, m = buffStrX.length; n < m; n++) {
+      if (buffStrX[n]) this.doKey(buffStrX[n], true);
+    }
+    this.render(localStorage['resBuffer']);
+    resBuffer = localStorage['resBuffer'];
+  } catch (e) {
+    for (var n = this.sav.length; n--;) {
+      localStorage.removeItem(this.sav[n]);
+    }
+  }
+})(window.localStorage);
+
+
+*/
+
+// ---------------- event listeners mouse --------------- //
+
+
+
+
+document.addEventListener('mouseup', e => {
+  var event = e || window.event,
+    target = getTargetKey(event.target),
+    keyText = target.textContent.replace(/\s*/g, ''),
+    key = this.keyBoard[keyText];
+
+  if (event.target === helpButton) {
+    window.location = 'http://dematte.at/calculator#usage';
+  }
+  if (event.target === smallerButton) {
+    toggleCalc(true);
+  }
+  if (event.target === lnButton) {
+    switchGrouping(true);
+  }
+  if (event.target !== lnButton) {
+    this.toggleOptions();
+  }
+  document.removeEventListener('mouseout', keyUp, false);
+  document.removeEventListener('mouseover', keyDown, false);
+  if (!pressedKey) {
+    return false;
+  }
+  if (key) {
+    this.doKey(keyText);
+    this.saveState();
+  }
+}, false);
+
+display.parentElement.addEventListener('dblclick', () => {
+  if (!this.helpButton.active) {
+    toggleCalc(true);
+  }
+}, false);
+
+this.helpButton.addEventListener('mouseover', () => {
+  this.toggleOptions(true);
+}, false);
+
+
+}
