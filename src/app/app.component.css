@@ -1,50 +1,27 @@
-  .mainF{
+.mainDiv{
     margin: 82px auto 32px;
     padding: 20px;
     display: flex;
-    width: 2000px;
-  }
-
-  table, td {
-    border: 2px solid grey;
-    border-collapse: collapse;
-    padding: 8px;
-  }
-  .content, .sideNumber{
-    display: flex;
-    max-width: auto;
-    align-items: left;
-  }
-  .content {
-    margin: 12px auto 32px;
-    padding: 0 16px;
-    
-  }
-  .content1 {
-    margin: 12px auto 32px;
-    padding: 0 16px;
-    max-width: auto;
-    align-items: left;
-    display: flex;
-  }
-  .sideNumber{
-    margin: 82px auto 32px;
-    padding: 0 16px;
-    position: fixed;
-  }
-.float-child1 {
-    width: 15%;
-    float: left;
-    padding: 20px;
-    
 }
-.float-child2 {
-  width: 65%;
-  float: left;
-  padding: 20px;
+.mainContain{
+    margin: auto auto auto;
+    padding: 10px;
+    align-items: center;
 }
-.float-child2 {
-  width: 20%;
-  float: left;
-  padding: 20px;
+#PW, #UN, #EI, #RPW, #N, #MN{
+    padding: 10px;
+}
+#LoginWord{
+    padding-bottom: 15px;
+    color: #B90143; padding-left: 10px; font-size: 30px;
+}
+#SButton{
+    padding-left: 10px;
+    padding-top: 15px;
+}
+#mainContain2{
+    display: none;
+}
+#mainContain1{
+    display: block;
 }

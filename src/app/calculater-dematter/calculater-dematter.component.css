@@ -142,7 +142,7 @@
 .calc-left, .calc-right {
 	position: relative;
 	float: left;
-	width: 240px;
+	width: 239px;
 }
 
 .calc-small .calc-left {

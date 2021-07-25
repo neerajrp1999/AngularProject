@@ -1,0 +1,26 @@
+<div class="mainF">
+
+    <div class="float-child1">
+      <div class="sideNumber" ng-app="myApp" ng-controller="NoCtrl"> 
+        <table>
+          <tr *ngFor=" let number of x " >
+            <td *ngFor=" let y of number " [ngStyle]="{'background-color': GstatusColor(y)}">
+                {{ y }}
+            </td>
+          </tr>
+          <tr>
+            <td colspan="5">
+              <button type="button" class="btn btn-primary" (click)="openCalculator()">Calculator</button>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  
+    <div class="float-child2">
+      <div class="content" role="main" >
+        <app-question-div (answerSelected)="attemptedQuestion($event)"></app-question-div>
+      </div>
+    </div>
+    
+  </div>

@@ -1,26 +1,87 @@
-<div class="mainF">
-
-  <div class="float-child1">
-    <div class="sideNumber" ng-app="myApp" ng-controller="NoCtrl"> 
-      <table>
-        <tr *ngFor=" let number of x " >
-          <td *ngFor=" let y of number " [ngStyle]="{'background-color': GstatusColor(y)}">
-              {{ y }}
+<div class="mainDiv">
+<div class="mainContain" id="mainContain1">
+    <form class="example-form">
+      <table class="example-full-width" cellspacing="0">
+        <tr>
+          <td id="LoginWord" colspan="2">
+            <span >Sing In</span>
+          </td>
+        </tr>
+        <tr>
+          <td id="UN" colspan="2">
+            <input matInput placeholder="Username Or Email Id" size="25" (focusout)="UserNameOnFocusOutEvent1($event)" required>
+          </td>
+        </tr>
+        <tr>
+          <td id="PW" colspan="2">
+            <input matInput placeholder="Password" type="password" (focusout)="PasswordOnFocusOutEvent1($event)" size="25" required>
+          </td>
+        </tr>
+        <tr>
+          <td id="SButton">
+            <input matButton type="button" value="Sing In" (click)="sing_in1()">
+          </td>
+          <td id="SButton">
+            <input matButton type="button" value="Sing Up" (click)="sing_up1()">
           </td>
         </tr>
       </table>
-    </div>
+    </form>
   </div>
 
-  <div class="float-child2">
-    <div class="content" role="main" >
-      <app-question-div (answerSelected)="attemptedQuestion($event)"></app-question-div>
-    </div>
-  </div>
-  <div class="float-child3">
-    <div class="content" role="main" >
-      <button (click)="openCalculator">Open Calculator</button>
-    </div>
+
+
+  <div class="mainContain" id="mainContain2">
+    <form class="example-form">
+      <table class="example-full-width" cellspacing="0">
+        <tr>
+          <td id="LoginWord" colspan="2">
+            <span>Sing Up</span>
+          </td>
+        </tr>
+        <tr>
+          <td id="N" colspan="2">
+            <input matInput placeholder="Enter Your Name" size="25" (focusout)="NameOnFocusOutEvent2($event)" required>
+          </td>
+        </tr>
+        <tr>
+          <td id="UN" colspan="2">
+            <input matInput placeholder="Create Username" size="25" (focusout)="UserNameOnFocusOutEvent2($event)" required>
+          </td>
+        </tr>
+        <tr>
+          <td id="EI" colspan="2">
+            <input matInput placeholder="Enter Email Id" size="25" (focusout)="EmailIdOnFocusOutEvent2($event)" required>
+          </td>
+        </tr>
+        <tr>
+          <td id="PW" colspan="2">
+            <input matInput placeholder="Create Password" minlength="10" type="password" size="25" (focusout)="PasswordOnFocusOutEvent2($event)" required>
+          </td>
+        </tr>
+        <tr>
+          <td id="RPW" colspan="2">
+            <input matInput placeholder="Re-enter Password" minlength="10" type="password" size="25" (focusout)="RePasswordOnFocusOutEvent2($event)" required>
+          </td>
+        </tr>
+        <tr>
+          <td id="MN" colspan="2">
+            <input id="MobileNo" matInput placeholder="Enter Mobile Number" maxlength="10" type="text" value="" size="25" (keyup)="MobileKeyUp($event)" required>
+          </td>
+        </tr>
+        <tr>
+          <td id="SButton">
+            <input matButton type="button" value="Sing Up" (click)="sing_up2()">
+          </td>
+          <td id="SButton">
+            <input matButton type="button" value="Sing In" (click)="sing_in2()">
+          </td>
+        </tr>
+      </table>
+    </form>
   </div>
 </div>
-<!-- <router-outlet></router-outlet> -->
+<!--
+<app-test-series></app-test-series>
+<router-outlet></router-outlet>
+-->
